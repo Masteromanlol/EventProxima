@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST['email'];
   $message = $_POST['message'];
 
-  $to = 'your-email@example.com'; // Replace with your desired email address
+  $to = 'perpendicularsquid@gmail.com'; // Replace with your desired email address
   $subject = 'New Contact Form Submission';
   $body = "Name: $name\nEmail: $email\nMessage: $message";
 
