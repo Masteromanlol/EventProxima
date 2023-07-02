@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Software Company - Features</title>
+  <title>Your Software Company</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
     /* Add your custom styles here */
@@ -17,6 +17,48 @@
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    header .user-profile {
+      position: relative;
+    }
+
+    header .user-profile .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header .user-profile:hover .dropdown-content {
+      display: block;
+    }
+
+    header .user-profile .dropdown-content a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    header .user-profile .dropdown-content a:hover {
+      background-color: #f2f2f2;
     }
 
     h2 {
@@ -55,65 +97,64 @@
       color: #999;
     }
   </style>
+  <script>
+    // JavaScript for user profile dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdowns = document.querySelectorAll('.user-profile');
+      for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="container">
     <header>
-      <!-- Add your logo and company name here -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="logo">Your Software Company</div>
+      <div class="user-profile">
+        <div class="user-profile-button">
+          <img src="user-icon.png" alt="User Icon">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
     </header>
 
     <section id="features">
       <h2>Features</h2>
       <ul>
         <li>
-          <div>
-            <span>Event Registration and Ticketing</span>
-            <p class="feature-description">Effortlessly manage event registration and ticketing. Sell tickets online and track attendee information.</p>
-          </div>
+          <span>Event Registration and Ticketing</span>
+          <p class="feature-description">Effortlessly create and manage event registrations and ticketing with our intuitive platform.</p>
         </li>
         <li>
-          <div>
-            <span>Speaker Management</span>
-            <p class="feature-description">Streamline speaker management. Easily manage speaker profiles, session assignments, and communication.</p>
-          </div>
+          <span>Speaker Management</span>
+          <p class="feature-description">Streamline speaker management tasks such as inviting speakers, managing profiles, and session scheduling.</p>
         </li>
         <li>
-          <div>
-            <span>Agenda Scheduling</span>
-            <p class="feature-description">Create and organize event agendas with ease. Schedule sessions, breaks, and activities.</p>
-          </div>
+          <span>Agenda Scheduling</span>
+          <p class="feature-description">Plan and organize event agendas, sessions, and activities with our flexible scheduling tools.</p>
         </li>
         <li>
-          <div>
-            <span>Networking Opportunities</span>
-            <p class="feature-description">Facilitate networking among attendees. Provide tools for connecting and fostering meaningful interactions.</p>
-          </div>
+          <span>Networking Opportunities</span>
+          <p class="feature-description">Enable attendees to connect and network with each other through our interactive networking features.</p>
         </li>
         <li>
-          <div>
-            <span>Live Streaming</span>
-            <p class="feature-description">Reach a wider audience with live streaming capabilities. Broadcast your event to remote participants.</p>
-          </div>
+          <span>Live Streaming</span>
+          <p class="feature-description">Deliver real-time live streams of your events to remote participants worldwide.</p>
         </li>
         <li>
-          <div>
-            <span>Virtual Exhibitor Booths</span>
-            <p class="feature-description">Create virtual exhibitor booths. Allow exhibitors to showcase their products and engage with attendees.</p>
-          </div>
+          <span>Virtual Exhibitor Booths</span>
+          <p class="feature-description">Provide exhibitors with virtual booths to showcase their products and engage with attendees.</p>
         </li>
         <li>
-          <div>
-            <span>Analytics and Reporting</span>
-            <p class="feature-description">Access detailed analytics and generate reports to gain insights into event performance and attendee engagement.</p>
-          </div>
+          <span>Analytics and Reporting</span>
+          <p class="feature-description">Access detailed analytics and generate reports to gain insights into event performance and attendee engagement.</p>
         </li>
       </ul>
     </section>
