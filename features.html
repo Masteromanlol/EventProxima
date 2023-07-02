@@ -8,21 +8,17 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10;
+      padding: 0;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     header .logo {
@@ -44,6 +40,7 @@
       padding: 10px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: opacity 0.3s ease-in-out; /* Add transition for smooth animation */
     }
 
     header .user-profile:hover .dropdown-content {
@@ -96,31 +93,47 @@
     ul {
       list-style-type: none;
       padding: 0;
+      align-items: left;
+      text-align: left;
+      margin: 0;
+      padding-left: 20px;
     }
 
     li {
       margin-bottom: 20px;
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-
-    li:before {
-      content: "\2713";
-      margin-right: 10px;
-      color: #ff0000;
+      align-items: center;
     }
 
     .feature-description {
-      margin-right: 20px;
+      margin-left: auto;
+      margin-right: 10%; /* Add a 10% margin on the right side */
       font-size: 16px;
       color: #666;
+    }
+
+    .feature-separator {
+      height: 1px;
+      background-color: #ccc;
+      margin-left: 20px;
+      margin-right: 10%;
+    }
+
+    #features {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 120px;
+      background-color: #fff;
     }
 
     footer {
       text-align: center;
       margin-top: 20px;
       color: #999;
+      padding: 10px;
+      background-color: #f2f2f2;
     }
   </style>
   <script>
@@ -136,67 +149,71 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">Your Software Company</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div class="user-profile">
-        <div class="user-profile-button">
-          <img src="" alt="User Icon">
-        </div>
-        <div class="dropdown-content">
-          <a href="#">Profile</a>
-          <a href="#">Settings</a>
-          <a href="#">Logout</a>
-        </div>
-      </div>
-    </header>
-
-    <section id="features">
-      <h2>Features</h2>
+  <header>
+    <div class="logo">Your Software Company</div>
+    <nav>
       <ul>
-        <li>
-          <span>Event Registration and Ticketing</span>
-          <p class="feature-description">Effortlessly create and manage event registrations and ticketing with our intuitive platform.</p>
-        </li>
-        <li>
-          <span>Speaker Management</span>
-          <p class="feature-description">Streamline speaker management tasks such as inviting speakers, managing profiles, and session scheduling.</p>
-        </li>
-        <li>
-          <span>Agenda Scheduling</span>
-          <p class="feature-description">Plan and organize event agendas, sessions, and activities with our flexible scheduling tools.</p>
-        </li>
-        <li>
-          <span>Networking Opportunities</span>
-          <p class="feature-description">Enable attendees to connect and network with each other through our interactive networking features.</p>
-        </li>
-        <li>
-          <span>Live Streaming</span>
-          <p class="feature-description">Deliver real-time live streams of your events to remote participants worldwide.</p>
-        </li>
-        <li>
-          <span>Virtual Exhibitor Booths</span>
-          <p class="feature-description">Provide exhibitors with virtual booths to showcase their products and engage with attendees.</p>
-        </li>
-        <li>
-          <span>Analytics and Reporting</span>
-          <p class="feature-description">Access detailed analytics and generate reports to gain insights into event performance and attendee engagement.</p>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </section>
+    </nav>
+    <div class="user-profile">
+      <div class="user-profile-button">
+        <img src="" alt="User Icon">
+      </div>
+      <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-      <p>© 2023 Your Software Company. All rights reserved.</p>
-    </footer>
-  </div>
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li>
+        <span>Event Registration and Ticketing</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Effortlessly create and manage event registrations and ticketing with our intuitive platform.</p>
+      </li>
+      <li>
+        <span>Speaker Management</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Streamline tasks such as inviting speakers, managing profiles, and session scheduling</p>
+      </li>
+      <li>
+        <span>Agenda Scheduling</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Plan and organize event agendas, sessions, and activities with our flexible scheduling tools.</p>
+      </li>
+      <li>
+        <span>Networking Opportunities</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Enable attendees to connect and network with each other through our interactive networking features.</p>
+      </li>
+      <li>
+        <span>Live Streaming</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Deliver real-time live streams of your events to remote participants worldwide.</p>
+      </li>
+      <li>
+        <span>Virtual Exhibitor Booths</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Provide exhibitors with virtual booths to showcase their products and engage with attendees.</p>
+      </li>
+      <li>
+        <span>Analytics and Reporting</span>
+        <div class="feature-separator"></div> <!-- Add a feature separator -->
+        <p class="feature-description">Gain insights with detailed analytics and reports on event performance and attendee engagement</p>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2023 Your Software Company. All rights reserved.</p>
+  </footer>
 </body>
 </html>
