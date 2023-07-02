@@ -1,63 +1,212 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Your Software Company - Pricing</title>
+<html><head>
+  <title>Your Software Company</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
-    /* Add your custom styles here */
-    .pricing-option {
-      display: inline-block;
-      width: 33%;
-      padding: 1px;
-      vertical-align: top;
-      text-align: center;
-    }
+  /* Add your custom styles here */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #feb16d, #e33981, #ba3a69);
+    margin: 10;
+    padding: 0;
+  }
 
-    .pricing-option h3 {
-      text-align: center;
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0,0,0,0)
+  };
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
 
-    .pricing-option .tag {
-      text-align: center;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #ff0000; /* Red color for Best Value tag */
-    }
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
 
-    .pricing-option ul {
-      list-style: none;
-      padding: 0;
-    }
+  header .user-profile {
+    position: relative;
+  }
 
-    .pricing-option li {
-      margin-bottom: 10px;
-    }
+  header .user-profile .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out; /* Add transition for smooth animation */
+  }
 
-    .pricing-option li:before {
-      content: '\2713'; /* Checkmark symbol */
-      margin-right: 5px;
-      color: #333;
-    }
+  header .user-profile:hover .dropdown-content {
+    display: block;
+  }
 
-    .pricing-option .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #333;
+  header .user-profile .dropdown-content a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  header .user-profile .dropdown-content a:hover {
+    background-color: #f2f2f2;
+  }
+
+  header nav {
+    display: flex;
+    margin-left: 0%;
+  }
+
+  header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin-right: 10px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  header nav ul li a:hover {
+    color: #000;
+  }
+
+  h2 {
+    text-align: center;
+    align-items: center;
+    color: #333;
+    margin-top: -50px;
+    margin-bottom: 0px;
+    margin-left:50%;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .feature-description {
+    align-items: center; /* Add a 50px margin on the right side */
+    font-size: 16px;
+    color: #666;
+  }
+
+  #pricing {
+    display: block;
+    margin-top:20px;
+    justify-content: center; /* Center align the pricing options */
+    flex-wrap: wrap; /* Wrap the pricing options to multiple lines */
+  }
+
+  .pricing-option {
+    width: 300px; /* Set a fixed width for each pricing option */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+     .pricing-option.basic {
+      background: linear-gradient(90deg, #feb16d, #e33981);
       color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      display: block;
+      margin-left:17.5%;
+      margin-bottom:auto;
     }
 
-    .pricing-option .btn:hover {
-      background-color: #ff0000;
+    .pricing-option.standard {
+      background: linear-gradient(90deg, #e33981, #ba3a69);
+      color: #fff;
+      display: block;
+      margin-left:42.5%;
+      margin-bottom:0%;
     }
-  </style>
+
+    .pricing-option.premium {
+      background: linear-gradient(90deg, #ba3a69, #feb16d);
+      color: #fff;
+      display: block;
+      margin-left:67.5%;
+      margin-bottom:0%;
+    }
+
+  .pricing-option h3 {
+    color: #333;
+    margin-top: 0;
+  }
+
+  .tag {
+    background-color: #1456b6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #5ff9ff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    background-color: #5ff9aa;
+  }
+  footer {
+    text-align: center;
+    
+    margin-top: 20px;
+    color:#feb16d;
+    padding: 10px;
+    background: rgba(0,0,0,0)
+  };
+</style>
+
+  <script>
+    // JavaScript for user profile dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var dropdowns = document.querySelectorAll('.user-profile');
+      for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
-    <!-- Add your logo and company name here -->
-    <nav>
+    <div class="logo">Your Software Company</div>
+    <nav style="
+    padding-top: 10px;
+">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
@@ -65,11 +214,25 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="user-profile">
+      <div class="user-profile-button">
+        <img src="" alt="User Icon">
+      </div>
+      <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
   </header>
 
   <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="pricing-option">
+    <h2 style="
+    height: 0px;
+">Pricing</h2>
+    <div class="pricing-option basic" style="
+    margin-top: 10px;
+">
       <h3>$4.99/month</h3>
       <div class="tag">Basic</div>
       <ul>
@@ -79,7 +242,7 @@
       </ul>
       <a href="checkout.html" class="btn">Buy Now</a>
     </div>
-    <div class="pricing-option">
+    <div class="pricing-option standard">
       <h3>$9.99/month</h3>
       <div class="tag">Standard</div>
       <ul>
@@ -90,7 +253,7 @@
       </ul>
       <a href="checkout.html" class="btn">Buy Now</a>
     </div>
-    <div class="pricing-option">
+    <div class="pricing-option premium">
       <h3>$19.99/month</h3>
       <div class="tag">Premium</div>
       <ul>
@@ -107,7 +270,6 @@
   </section>
 
   <footer>
-    <p>© 2023 EventProxima. All rights reserved.</p>
+    <p>© 2023 Your Software Company. All rights reserved.</p>
   </footer>
-</body>
-</html>
+</body></html>
