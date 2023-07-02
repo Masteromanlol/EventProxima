@@ -1,4 +1,5 @@
-<html><head>
+<html>
+<head>
   <title>Your Software Company</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
@@ -16,8 +17,7 @@
     font-weight: bold;
     align-items: center;
     padding: 10px;
-    background: rgba(0,0,0,0)
-  };
+    background: rgba(0,0,0,0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 
@@ -115,10 +115,10 @@
   }
 
   #pricing {
-    display: block;
-    margin-top:20px;
+    display: flex;
     justify-content: center; /* Center align the pricing options */
     flex-wrap: wrap; /* Wrap the pricing options to multiple lines */
+    margin-top: 20px;
   }
 
   .pricing-option {
@@ -127,31 +127,26 @@
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
+    margin: 0 10px; /* Add margin around each pricing option */
   }
 
-     .pricing-option.basic {
-      background: linear-gradient(90deg, #feb16d, #e33981);
-      color: #fff;
-      display: block;
-      margin-left:17.5%;
-      margin-bottom:auto;
-    }
+  .pricing-option.basic {
+    background: linear-gradient(90deg, #feb16d, #e33981);
+    color: #fff;
+    margin-bottom:auto;
+  }
 
-    .pricing-option.standard {
-      background: linear-gradient(90deg, #e33981, #ba3a69);
-      color: #fff;
-      display: block;
-      margin-left:42.5%;
-      margin-bottom:0%;
-    }
+  .pricing-option.standard {
+    background: linear-gradient(90deg, #e33981, #ba3a69);
+    color: #fff;
+    margin-bottom:0%;
+  }
 
-    .pricing-option.premium {
-      background: linear-gradient(90deg, #ba3a69, #feb16d);
-      color: #fff;
-      display: block;
-      margin-left:67.5%;
-      margin-bottom:0%;
-    }
+  .pricing-option.premium {
+    background: linear-gradient(90deg, #ba3a69, #feb16d);
+    color: #fff;
+    margin-bottom:0%;
+  }
 
   .pricing-option h3 {
     color: #333;
@@ -181,13 +176,12 @@
   }
   footer {
     text-align: center;
-    
     margin-top: 20px;
     color:#feb16d;
     padding: 10px;
     background: rgba(0,0,0,0)
   };
-</style>
+  </style>
 
   <script>
     // JavaScript for user profile dropdown functionality
@@ -204,9 +198,7 @@
 <body>
   <header>
     <div class="logo">Your Software Company</div>
-    <nav style="
-    padding-top: 10px;
-">
+    <nav style="padding-top: 10px;">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
@@ -227,12 +219,8 @@
   </header>
 
   <section id="pricing">
-    <h2 style="
-    height: 0px;
-">Pricing</h2>
-    <div class="pricing-option basic" style="
-    margin-top: 10px;
-">
+    <h2 style="height: 0px;">Pricing</h2>
+    <div class="pricing-option basic" style="margin-top: 10px;">
       <h3>$4.99/month</h3>
       <div class="tag">Basic</div>
       <ul>
@@ -272,4 +260,5 @@
   <footer>
     <p>© 2023 Your Software Company. All rights reserved.</p>
   </footer>
-</body></html>
+</body>
+</html>
