@@ -3,35 +3,138 @@
 <head>
   <title>Your Software Company - Features</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    li:before {
+      content: "\2713";
+      margin-right: 10px;
+      color: #ff0000;
+    }
+
+    .feature-description {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .feature-image {
+      margin-left: 20px;
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <!-- Add your logo and company name here -->
-    <nav>
+  <div class="container">
+    <header>
+      <!-- Add your logo and company name here -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="features">
+      <h2>Features</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <div>
+            <span>Event Registration and Ticketing</span>
+            <p class="feature-description">Effortlessly manage event registration and ticketing. Sell tickets online and track attendee information.</p>
+          </div>
+          <img class="feature-image" src="event-registration.jpg" alt="Event Registration and Ticketing">
+        </li>
+        <li>
+          <div>
+            <span>Speaker Management</span>
+            <p class="feature-description">Streamline speaker management. Easily manage speaker profiles, session assignments, and communication.</p>
+          </div>
+          <img class="feature-image" src="speaker-management.jpg" alt="Speaker Management">
+        </li>
+        <li>
+          <div>
+            <span>Agenda Scheduling</span>
+            <p class="feature-description">Create and organize event agendas with ease. Schedule sessions, breaks, and activities.</p>
+          </div>
+          <img class="feature-image" src="agenda-scheduling.jpg" alt="Agenda Scheduling">
+        </li>
+        <li>
+          <div>
+            <span>Networking Opportunities</span>
+            <p class="feature-description">Facilitate networking among attendees. Provide tools for connecting and fostering meaningful interactions.</p>
+          </div>
+          <img class="feature-image" src="networking-opportunities.jpg" alt="Networking Opportunities">
+        </li>
+        <li>
+          <div>
+            <span>Live Streaming</span>
+            <p class="feature-description">Reach a wider audience with live streaming capabilities. Broadcast your event to remote participants.</p>
+          </div>
+          <img class="feature-image" src="live-streaming.jpg" alt="Live Streaming">
+        </li>
+        <li>
+          <div>
+            <span>Virtual Exhibitor Booths</span>
+            <p class="feature-description">Create virtual exhibitor booths. Allow exhibitors to showcase their products and engage with attendees.</p>
+          </div>
+          <img class="feature-image" src="virtual-booths.jpg" alt="Virtual Exhibitor Booths">
+        </li>
+        <li>
+          <div>
+            <span>Analytics and Reporting</span>
+            <p class="feature-description">Access detailed analytics and generate reports to gain insights into event performance and attendee engagement.</p>
+          </div>
+          <img class="feature-image" src="analytics-reporting.jpg" alt="Analytics and Reporting">
+        </li>
       </ul>
-    </nav>
-  </header>
+    </section>
 
-  <section id="features">
-    <h2>Features</h2>
-    <ul>
-      <li>Event Registration and Ticketing</li>
-      <li>Speaker Management</li>
-      <li>Agenda Scheduling</li>
-      <li>Networking Opportunities</li>
-      <li>Live Streaming</li>
-      <li>Virtual Exhibitor Booths</li>
-      <li>Analytics and Reporting</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Your Software Company. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2023 Your Software Company. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
