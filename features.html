@@ -1,142 +1,179 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <title>Your Software Company</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  
   <style>
-    /* Add your custom styles here */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 10;
-      padding: 0;
-    }
+  /* Add your custom styles here */
+  body {
+    font-family: Clarendon, sans-serif;
+    background: linear-gradient(135deg, #feb16d, #e33981, #ba3a69);
+    margin-top: 10;
+    margin-right: 10;
+    margin-left: 10;
+    padding: 0;
+  }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+  }
 
-    header .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-    }
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
 
-    header .user-profile {
-      position: relative;
-    }
+  header .user-profile {
+    position: relative;
+  }
 
-    header .user-profile .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      transition: opacity 0.3s ease-in-out; /* Add transition for smooth animation */
-    }
+  header .user-profile .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 1s ease-in-out; /* Add transition for smooth animation */
+  }
 
-    header .user-profile:hover .dropdown-content {
-      display: block;
-    }
+  header .user-profile:hover .dropdown-content {
+    display: block;
+  }
 
-    header .user-profile .dropdown-content a {
-      display: block;
-      padding: 5px;
-      text-decoration: none;
-      color: #333;
-    }
+  header .user-profile .dropdown-content a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+  }
 
-    header .user-profile .dropdown-content a:hover {
-      background-color: #f2f2f2;
-    }
+  header .user-profile .dropdown-content a:hover {
+    background-color: #f2f2f2;
+  }
 
-    header nav {
-      display: flex;
-      align-items: center;
-    }
-
-    header nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    header nav ul li {
-      margin-right: 10px;
-    }
-
-    header nav ul li a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    header nav ul li a:hover {
-      color: #ff0000;
-    }
-
-    h2 {
+  header nav {
+    display: flex;
+    margin-left: -10%;
       text-align: center;
-      color: #333;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+    align-items: center;
+  }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      align-items: left;
-      text-align: left;
-      margin: 0;
-      padding-left: 20px;
-    }
+  header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right:50%;
+  }
 
-    li {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-    }
+  header nav ul li {
+    margin-right: 10px;
+  }
 
-    .feature-description {
-      margin-left: auto;
-      margin-right: 10%; /* Add a 10% margin on the right side */
-      font-size: 16px;
-      color: #666;
-    }
+  header nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
 
-    .feature-separator {
-      height: 1px;
-      background-color: #ccc;
-      margin-left: 20px;
-      margin-right: 10%;
-    }
+  header nav ul li a:hover {
+    color: #000;
+  }
+  /* Style for the features section */
+  #features {
+    margin: 30px;
+  }
 
-    #features {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 120px;
-      background-color: #fff;
-    }
+  /* Style for the feature title */
+  #features h2 {
+    height: 30px;
+    width: 100px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    
+    background: #fff
+    border-radius: 5px;
+  }
 
-    footer {
-      text-align: center;
-      margin-top: 20px;
-      color: #999;
-      padding: 10px;
-      background-color: #f2f2f2;
-    }
-  </style>
-  <script>
+  /* Style for the feature list */
+   #features ul {
+    margin-left: 30px;
+    padding: 0;
+    column-width: 500px; /* Set the column width to 500px */
+  }
+
+  /* Style for each feature item */
+  #features li {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the feature separator */
+  .feature-separator {
+    height: 3px;
+    background-color: #eee;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  /* Style for the feature description */
+  .feature-description {
+    margin: 0;
+    padding: 0;
+    color: #000;
+      font-weight: thin;
+  }
+
+  /* Style for the feature bullet point */
+  #features li:nth-child(1) span::before {
+    content: "🚀";
+  }
+
+  #features li:nth-child(2) span::before {
+    content: "💡";
+  }
+
+  #features li:nth-child(3) span::before {
+    content: "🤝";
+  }
+
+  #features li:nth-child(4) span::before {
+    content: "💥";
+  }
+
+  #features li:nth-child(5) span::before {
+    content: "📊 ";
+  }
+
+  #features li:nth-child(6) span::before {
+    content: "🎨";
+  }
+
+  #features li:nth-child(7) span::before {
+    content: "⚡";
+  }
+#features li:nth-child(8) span::before {
+    content: "🌟";
+  }
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color:#feb16d;
+    padding: 10px;
+    background: rgba(0,0,0,0)
+  }
+  </style><script>
     // JavaScript for user profile dropdown functionality
     document.addEventListener('DOMContentLoaded', function() {
       var dropdowns = document.querySelectorAll('.user-profile');
@@ -149,9 +186,10 @@
   </script>
 </head>
 <body>
-  <header>
+  
+<header>
     <div class="logo">Your Software Company</div>
-    <nav>
+    <nav style="padding-top: 10px;">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
@@ -170,50 +208,57 @@
       </div>
     </div>
   </header>
+<section id="features">
+  <h2 style="height: 30px;width: 100px;margin-top: 0px;margin-bottom: 0px;margin-left: 825px;">Features</h2>
+  <ul style="margin-left: 250px;margin-right: 250px;">
+    <li>
+      <span>Unique Event Formats</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Take virtual events to the next level with our innovative features that go beyond the ordinary. Engage your audience through captivating gamification elements, immerse them in virtual reality experiences, and foster collaborative workshops that spark creativity and knowledge sharing.</p>
+    </li>
+    <li>
+      <span>Seamless Integration</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Effortlessly integrate with the tools and platforms your event organizers already rely on. Our software seamlessly connects with popular systems like CRM, marketing automation, project management, and video conferencing, enabling a smooth data flow and maximizing efficiency.</p>
+    </li>
+    <li>
+      <span>Advanced Networking Features</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Forge genuine connections among participants with our advanced networking tools. Our AI-powered matchmaking algorithm intelligently pairs like-minded individuals, while interest-based group discussions and virtual networking lounges provide the perfect environment for fruitful conversations and relationship building.</p>
+    </li>
+    <li>
+      <span>Enhanced Audience Engagement</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Captivate your audience with interactive features that keep them fully engaged. Conduct live polls and surveys, facilitate real-time Q&amp;A sessions, empower participants with dynamic chat and messaging capabilities, and allow virtual hand raising for inclusive and vibrant discussions.</p>
+    </li>
+    <li>
+      <span>Analytics and Insights</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Unlock the power of data with our comprehensive analytics suite. Gain valuable insights into attendee behavior, session performance, and networking interactions. Customize reports and dashboards to track key metrics, benchmark against industry standards, and make data-driven decisions for future success.</p>
+    </li>
+    <li>
+      <span>Personalized Experiences</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Tailor every aspect of your virtual event to reflect your unique brand identity and create a truly immersive and unforgettable experience for your audience. With our virtual event management software, you have the power to customize every detail, ensuring that your event is a true reflection of your brand and leaves a lasting impression on attendees.
 
-  <section id="features">
-    <h2>Features</h2>
-    <ul>
-      <li>
-        <span>Event Registration and Ticketing</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Effortlessly create and manage event registrations and ticketing with our intuitive platform.</p>
-      </li>
-      <li>
-        <span>Speaker Management</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Streamline tasks such as inviting speakers, managing profiles, and session scheduling</p>
-      </li>
-      <li>
-        <span>Agenda Scheduling</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Plan and organize event agendas, sessions, and activities with our flexible scheduling tools.</p>
-      </li>
-      <li>
-        <span>Networking Opportunities</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Enable attendees to connect and network with each other through our interactive networking features.</p>
-      </li>
-      <li>
-        <span>Live Streaming</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Deliver real-time live streams of your events to remote participants worldwide.</p>
-      </li>
-      <li>
-        <span>Virtual Exhibitor Booths</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Provide exhibitors with virtual booths to showcase their products and engage with attendees.</p>
-      </li>
-      <li>
-        <span>Analytics and Reporting</span>
-        <div class="feature-separator"></div> <!-- Add a feature separator -->
-        <p class="feature-description">Gain insights with detailed analytics and reports on event performance and attendee engagement</p>
-      </li>
-    </ul>
-  </section>
+</p>
+    </li>
+    <li>
+      <span>Streamlined Event Management</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Say goodbye to tedious tasks with our streamlined event management features. Effortlessly handle speaker invitations, profile management, and session scheduling, while enabling seamless collaboration and communication among organizers, speakers, sponsors, and exhibitors.</p>
+    </li>
+    <li>
+      <span>Outstanding Customer Support</span>
+      <div class="feature-separator"></div>
+      <p class="feature-description">Experience unparalleled support throughout your event journey. Our dedicated account managers provide personalized assistance, while our comprehensive support portal offers a wealth of resources, FAQs, tutorials, and prompt communication channels to ensure your success.</p>
+    </li>
+  </ul>
+</section>
 
   <footer>
     <p>© 2023 Your Software Company. All rights reserved.</p>
   </footer>
-</body>
-</html>
+
+
+</body></html>
