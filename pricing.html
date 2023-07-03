@@ -1,13 +1,14 @@
-<html>
-<head>
+<html><head>
   <title>Your Software Company</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <style>
   /* Add your custom styles here */
   body {
-    font-family: Arial, sans-serif;
+    font-family: Clarendon, sans-serif;
     background: linear-gradient(135deg, #feb16d, #e33981, #ba3a69);
-    margin: 10;
+    margin-top: 10;
+    margin-right: 10;
+    margin-left: 10;
     padding: 0;
   }
 
@@ -19,6 +20,7 @@
     padding: 10px;
     background: rgba(0,0,0,0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
   }
 
   header .logo {
@@ -40,7 +42,7 @@
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease-in-out; /* Add transition for smooth animation */
+    transition: opacity 1s ease-in-out; /* Add transition for smooth animation */
   }
 
   header .user-profile:hover .dropdown-content {
@@ -60,16 +62,16 @@
 
   header nav {
     display: flex;
-    margin-left: 0%;
+    margin-left: -10%;
+      text-align: center;
+    align-items: center;
   }
 
   header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    text-align: center;
-    align-items: center;
+    margin-right:50%;
   }
 
   header nav ul li {
@@ -87,11 +89,9 @@
 
   h2 {
     text-align: center;
-    align-items: center;
+    align-items: top;
     color: #333;
     margin-top: -50px;
-    margin-bottom: 0px;
-    margin-left:50%;
   }
 
   ul {
@@ -105,52 +105,81 @@
   li {
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
+    text-align: center;
   }
 
   .feature-description {
-    align-items: center; /* Add a 50px margin on the right side */
+    text-align: center;/* Add a 50px margin on the right side */
     font-size: 16px;
     color: #666;
   }
 
   #pricing {
     display: flex;
-    justify-content: center; /* Center align the pricing options */
-    flex-wrap: wrap; /* Wrap the pricing options to multiple lines */
+    justify-content: center;
     margin-top: 20px;
+    align-items: center;
+    text-align: center;
   }
 
   .pricing-option {
-    width: 300px; /* Set a fixed width for each pricing option */
+    flex: 0; /* Add flex property to make each pricing option grow and shrink */
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin: 0 10px; /* Add margin around each pricing option */
+    margin: 10px;
   }
 
   .pricing-option.basic {
     background: linear-gradient(90deg, #feb16d, #e33981);
     color: #fff;
-    margin-bottom:auto;
+    margin-right: 5%;
+    width: 100px;
+    margin-bottom: -200px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    text-align: center;
   }
 
   .pricing-option.standard {
     background: linear-gradient(90deg, #e33981, #ba3a69);
     color: #fff;
-    margin-bottom:0%;
+    margin-right: 5%;
+    margin-bottom: -160px;
+    width: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
   }
 
   .pricing-option.premium {
     background: linear-gradient(90deg, #ba3a69, #feb16d);
     color: #fff;
-    margin-bottom:0%;
+    width: 100px;
+    margin-right: 5%;
+    padding-left: 100px;
+    margin-bottom: -50px;
+    padding-right: 100px;
+    text-align: center;
+  }
+  
+  .pricing-option.lifetime {
+    background: linear-gradient(90deg, #1456b6, #5ff9ff);
+    color: #fff;
+    width: 100px;
+    margin-right: 5%;
+    padding-left: 100px;
+    margin-bottom: -50px;
+    padding-right: 100px;
+    text-align: center;
   }
 
   .pricing-option h3 {
     color: #333;
     margin-top: 0;
+    text-align: center;
   }
 
   .tag {
@@ -165,7 +194,7 @@
     display: inline-block;
     background-color: #5ff9ff;
     color: #000;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -180,7 +209,7 @@
     color:#feb16d;
     padding: 10px;
     background: rgba(0,0,0,0)
-  };
+  }
   </style>
 
   <script>
@@ -195,7 +224,7 @@
     });
   </script>
 </head>
-<body>
+<body style="margin-bottom: 0px;">
   <header>
     <div class="logo">Your Software Company</div>
     <nav style="padding-top: 10px;">
@@ -219,8 +248,8 @@
   </header>
 
   <section id="pricing">
-    <h2 style="height: 0px;">Pricing</h2>
-    <div class="pricing-option basic" style="margin-top: 10px;">
+    <h2 style="height: 280px;">Pricing</h2>
+    <div class="pricing-option basic">
       <h3>$4.99/month</h3>
       <div class="tag">Basic</div>
       <ul>
@@ -255,10 +284,24 @@
       </ul>
       <a href="checkout.html" class="btn">Buy Now</a>
     </div>
+    <div class="pricing-option lifetime">
+      <h3>$299.99 (Lifetime)</h3>
+      <div class="tag">Lifetime</div>
+      <ul>
+        <li>Event Registration and Ticketing</li>
+        <li>Speaker Management</li>
+        <li>Agenda Scheduling</li>
+        <li>Networking Opportunities</li>
+        <li>Live Streaming</li>
+        <li>Virtual Exhibitor Booths</li>
+        <li>Analytics and Reporting</li>
+      </ul>
+      <a href="checkout.html" class="btn">Buy Now</a>
+    </div>
   </section>
 
   <footer>
     <p>© 2023 Your Software Company. All rights reserved.</p>
   </footer>
-</body>
-</html>
+
+</body></html>
