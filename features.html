@@ -3,176 +3,142 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   
   <style>
-  /* Add your custom styles here */
-  body {
-    font-family: Clarendon, sans-serif;
-    background: linear-gradient(135deg, #feb16d, #e33981, #ba3a69);
-    margin-top: 10;
-    margin-right: 10;
-    margin-left: 10;
-    padding: 0;
-  }
+    /* Add your custom styles here */
+    body {
+  font-family: Clarendon, sans-serif;
+  background: linear-gradient(135deg, #1456b6, #5ff9ff);
+  margin-top: 0;
+  margin-right: 10;
+  margin-left: 10;
+  padding: 0;
+  color: #000; /* Set text color to black */
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    align-items: center;
-    padding: 10px;
-    background: rgba(0,0,0,0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+  padding: 10px;
+  background: rgba(0,0,0,0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+header .user-profile {
+  position: relative;
+}
+
+header .user-profile .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 1s ease-in-out; /* Add transition for smooth animation */
+}
+
+header .user-profile:hover .dropdown-content {
+  display: block;
+}
+
+header .user-profile .dropdown-content a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+header .user-profile .dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+header nav {
+  display: flex;
+  margin-left: -10%;
+  text-align: center;
+  align-items: center;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 50%;
+}
+
+header nav ul li {
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+header nav ul li a:hover {
+  color: #333;
+}
+
+
+    /* Style for the features section */
+    #features {
+      margin: 30px;
+      background: linear-gradient(135deg, #1456b6, #5ff9ff);
+      padding: 20px;
       border-radius: 15px;
-  }
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      color: #000;
+    }
 
-  header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  header .user-profile {
-    position: relative;
-  }
-
-  header .user-profile .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: opacity 1s ease-in-out; /* Add transition for smooth animation */
-  }
-
-  header .user-profile:hover .dropdown-content {
-    display: block;
-  }
-
-  header .user-profile .dropdown-content a {
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    color: #333;
-  }
-
-  header .user-profile .dropdown-content a:hover {
-    background-color: #f2f2f2;
-  }
-
-  header nav {
-    display: flex;
-    margin-left: -10%;
+    /* Style for the feature title */
+    #features h2 {
+      height: 30px;
+      width: 100px;
+      margin: 0;
+      background-color: white;
+      padding: 10px;
       text-align: center;
-    align-items: center;
-  }
+      border-radius: 5px;
+      margin-bottom: 20px;
+      color: #000;
+    }    
+#features ul {
+      margin-left: 30px;
+      padding: 0;
+      column-width: 500px; /* Set the column width to 500px */
+      column-gap: 20px; /* Add gap between columns */
+    }
 
-  header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-right:50%;
-  }
+    /* Style for the feature list items */
+    #features ul li {
+      margin-bottom: 10px;
+    }
 
-  header nav ul li {
-    margin-right: 10px;
-  }
+    /* Style for the feature description */
+    #features ul li p {
+      margin: 0;
+      padding: 0;
+    }
 
-  header nav ul li a {
-    text-decoration: none;
-    color: #333;
-  }
+    /* Style for the feature icon */
+    #features ul li i {
+      margin-right: 10px;
+    }
 
-  header nav ul li a:hover {
+    footer{
+background-color: transparent;
     color: #000;
-  }
-  /* Style for the features section */
-  #features {
-    margin: 30px;
-  }
-
-  /* Style for the feature title */
-  #features h2 {
-    height: 30px;
-    width: 100px;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    
-    background: #fff
-    border-radius: 5px;
-  }
-
-  /* Style for the feature list */
-   #features ul {
-    margin-left: 30px;
-    padding: 0;
-    column-width: 500px; /* Set the column width to 500px */
-  }
-
-  /* Style for each feature item */
-  #features li {
-    list-style-type: none;
-    margin-bottom: 20px;
-  }
-
-  /* Style for the feature separator */
-  .feature-separator {
-    height: 3px;
-    background-color: #eee;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-
-  /* Style for the feature description */
-  .feature-description {
-    margin: 0;
-    padding: 0;
-    color: #000;
-      font-weight: thin;
-  }
-
-  /* Style for the feature bullet point */
-  #features li:nth-child(1) span::before {
-    content: "🚀";
-  }
-
-  #features li:nth-child(2) span::before {
-    content: "💡";
-  }
-
-  #features li:nth-child(3) span::before {
-    content: "🤝";
-  }
-
-  #features li:nth-child(4) span::before {
-    content: "💥";
-  }
-
-  #features li:nth-child(5) span::before {
-    content: "📊 ";
-  }
-
-  #features li:nth-child(6) span::before {
-    content: "🎨";
-  }
-
-  #features li:nth-child(7) span::before {
-    content: "⚡";
-  }
-#features li:nth-child(8) span::before {
-    content: "🌟";
-  }
-  footer {
-    text-align: center;
-    margin-top: 20px;
-    color:#feb16d;
-    padding: 10px;
-    background: rgba(0,0,0,0)
-  }
+    }
   </style><script>
     // JavaScript for user profile dropdown functionality
     document.addEventListener('DOMContentLoaded', function() {
@@ -187,6 +153,7 @@
 </head>
 <body style="
     height: 921px;
+    margin-top: 10px;
 ">
   
 <header style="
@@ -264,6 +231,7 @@
   <footer>
     <p>© 2023 Your Software Company. All rights reserved.</p>
   </footer>
+
 
 
 
