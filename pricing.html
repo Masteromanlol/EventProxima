@@ -125,16 +125,20 @@ li {
   /* Increase the margin-bottom for spacing */
 }
 
-.pricing-option {
-  flex: 0;
-  /* Add flex property to make each pricing option grow and shrink */
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  margin: 10px;
-  color: #000;
-}
+  .pricing-option {
+    flex: 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10px;
+    color: #000;
+    transition: transform 0.2s ease-out;
+  }
+
+  .pricing-option:hover {
+    transform: translateY(5px);
+  }
 
 .pricing-option.basic {
   background: linear-gradient(90deg, #1456b6, #2e7ae8);
@@ -193,45 +197,18 @@ li {
   padding: 10px 30px;
   text-decoration: none;
   border-radius: 5px;
-  
+  background-color: transparent; /* Remove the background color */
   margin-top: 10px;
-    color: #000;
-  /* Set different background colors for each button */
+  color: #000;
+  border: 1px solid #fff; /* Add a white border */
+  transition: background-color 0.3s ease;
 }
 
-.pricing-option.basic .btn {
-  background: #196ce3;
-
-}
-
-.pricing-option.standard .btn {
-  background: #5c97ed;
-  border-color: #fff;
-  border-width:2px;
-
-}
-
-.pricing-option.premium .btn {
-  background: #2e7ae8;
-
-}
-
-.pricing-option.lifetime .btn {
-  background: #e33981;
-
-}
-
-.pricing-option.basic .btn:hover {
-  background: #1456b6;
-}
-    .pricing-option.standard .btn:hover {
-  background: #2e7ae8;
-}
-.pricing-option.premium .btn:hover {
-  background: #73a6f0;
-}
-      .pricing-option.lifetime .btn:hover {
-  background: #ba3a69;
+.pricing-option.basic .btn:hover,
+.pricing-option.standard .btn:hover,
+.pricing-option.premium .btn:hover,
+.pricing-option.lifetime .btn:hover {
+  background-color: #fff;
 }
 footer {
   text-align: center;
@@ -280,8 +257,8 @@ footer {
   <section id="pricing" style="width: 1660px;margin-right: 0px;margin-left: 86px;">
     <h2 style="margin-right: 33px;height: 100px;">Pricing</h2>
     <div class="pricing-option basic" style="
-    margin-bottom: -402px;
-    margin-right: 1068px;
+    margin-bottom: -384px;
+    margin-right: 1070px;
 ">
       <h3>$4.99/month</h3>
       <div class="tag">Basic</div>
@@ -293,7 +270,7 @@ footer {
       <a href="checkout.html" class="btn">Buy Now</a>
     </div>
     <div class="pricing-option standard" style="
-    margin-bottom: -453px;
+    margin-bottom: -440px;
 ">
       <h3>$9.99/month</h3>
       <div class="tag">Standard</div>
@@ -306,7 +283,7 @@ footer {
       <a href="checkout.html" class="btn">Buy Now</a>
     </div>
     <div class="pricing-option premium" style="
-    margin-bottom: -658px;
+    margin-bottom: -627px;
     margin-left: 25px;
 ">
       <h3>$19.99/month</h3>
