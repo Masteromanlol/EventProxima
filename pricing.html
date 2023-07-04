@@ -29,7 +29,7 @@ header {
 header .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000;
 }
 
 header .user-profile {
@@ -83,17 +83,17 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
 header nav ul li a:hover {
-  color: #000;
+  color: #333;
 }
 
 h2 {
   text-align: center;
   align-items: top;
-  color: #333;
+  color: #000;
   margin-top: -50px;
 }
 
@@ -137,7 +137,7 @@ li {
 }
 
 .pricing-option.basic {
-  background: linear-gradient(90deg, #1456b6, #14a7b6);
+  background: linear-gradient(90deg, #1456b6, #2e7ae8);
   margin-right: 60%;
   width: 100px;
   padding-left: 100px;
@@ -147,7 +147,7 @@ li {
 }
 
 .pricing-option.standard {
-  background: linear-gradient(90deg, #14a7b6, #5ff9ff);
+  background: linear-gradient(90deg, #2e7ae8, #73a6f0);
   margin-right: 23.25%;
   width: 100px;
   padding-left: 100px;
@@ -157,7 +157,7 @@ li {
 }
 
 .pricing-option.premium {
-  background: linear-gradient(90deg, #5ff9ff, #1456b6);
+  background: linear-gradient(90deg, #73a6f0, #1456b6);
   width: 100px;
   margin-right: -16.875%;
   padding-left: 100px;
@@ -193,28 +193,31 @@ li {
   padding: 10px 30px;
   text-decoration: none;
   border-radius: 5px;
+  
   margin-top: 10px;
     color: #000;
   /* Set different background colors for each button */
 }
 
 .pricing-option.basic .btn {
-  background: linear-gradient(90deg, #1456b6, #14a7b6);
+  background: #196ce3;
 
 }
 
 .pricing-option.standard .btn {
-  background: linear-gradient(90deg, #14a7b6, #5ff9ff);
+  background: #5c97ed;
+  border-color: #fff;
+  border-width:2px;
 
 }
 
 .pricing-option.premium .btn {
-  background: linear-gradient(90deg, #5ff9ff, #1456b6);
+  background: #2e7ae8;
 
 }
 
 .pricing-option.lifetime .btn {
-  background: linear-gradient(90deg, #feb16d, #e33981, #ba3a69);
+  background: #e33981;
 
 }
 
@@ -222,15 +225,18 @@ li {
   background: #1456b6;
 }
     .pricing-option.standard .btn:hover {
-  background: #14a7b6;
+  background: #2e7ae8;
 }
 .pricing-option.premium .btn:hover {
-  background: #5ff9ff;
+  background: #73a6f0;
+}
+      .pricing-option.lifetime .btn:hover {
+  background: #ba3a69;
 }
 footer {
   text-align: center;
   margin-top: 20px;
-  color: #feb16d;
+  color: #000;
   padding: 10px;
   background: rgba(0,0,0,0);
 }
